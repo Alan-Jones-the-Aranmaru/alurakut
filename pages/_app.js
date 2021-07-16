@@ -27,6 +27,12 @@ const GlobalStyle = createGlobalStyle`
     height: auto;
     display: block;
   }
+/**teste p arrumar a imagem quando menos de 860px */
+  #profilePicture {
+  @media(max-width: 860px){
+      display: none;
+    }
+  }
 
   ${AlurakutStyles}
 

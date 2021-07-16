@@ -39,11 +39,12 @@ export function AlurakutMenu({ githubUser }) {
             Sair
           </a>
           <div>
-            <input placeholder="Pesquisar no Orkut" />
+            <input placeholder="Pesquisar no Alurakut" />
           </div>
         </nav>
 
         <button onClick={() => setMenuState(!isMenuOpen)}>
+          {/*isMenuOpen && <img src={`${BASE_URL}/icons/menu-open.svg?v=${v}`} />*/}
           {isMenuOpen && <img src={`${BASE_URL}/icons/menu-open.svg?v=${v}`} />}
           {!isMenuOpen && <img src={`${BASE_URL}/icons/menu-closed.svg?v=${v}`} />}
         </button>
@@ -70,7 +71,7 @@ AlurakutMenu.Wrapper = styled.header`
     opacity: ${({ isMenuOpen }) => isMenuOpen ? '1' : '0'};
     transform: ${({ isMenuOpen }) => isMenuOpen ? 'translateY(0)' : 'translateY(calc(-100% - 48px))'};
     @media(min-width: 860px) {
-      display: none;
+      display: block;
     }
     > div {
       max-width: 400px;
